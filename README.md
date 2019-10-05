@@ -1,12 +1,12 @@
 # For lawyers who type on Windows
 
 ## To use:
-1. Save this file somwehere with the extension .ahk
+1. Save [this file](https://raw.githubusercontent.com/saizai/autohotkeys_for_lawyers/master/autohotkeys_for_lawyers.ahk) somwehere with the extension .ahk
 2. Install https://autohotkey.com
 3. Right click the saved file and click "run this script"
 4. To start on boot:
  a. open explorer (windows + e)
- b. go to  %appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+ b. go to  `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`
  c. right click > new > shortcut, enter the location of the .ahk file
 
 ## Differences from OSX Extended Keyboard
@@ -22,11 +22,11 @@ Disables alt + right shift changing text direction.
 |If you type alt + (the key below)|you get|
 |--------------------------------|------|
 |(combining keystrokes)||
-|\`|grave next character|
-|e|acute next character|
-|i|circumflex next character|
-|u|umlaut next character|
-|n|tilde next character (including n, eg ñÑ)|
+|\`|grave next character (èÀÈòÒìÌùÙ)|
+|e|acute next character (éáÁÉóÓíÍúÚ)|
+|i|circumflex next character (îâêÂÊôÔÎûÛ)|
+|u|umlaut next character (üäëïöËÏÖÜ)|
+|n|tilde next character (ñãõÃÕÑ)|
 |(single keystrokes)||
 |'|a-e ligature (æÆ)|
 |a|ring a (åÅ)|
@@ -63,7 +63,7 @@ Disables alt + right shift changing text direction.
 |g|copyright ©|
 |r|registered trademark ®|
 |shift r|per mille ‰|
-|p|pi ᴨΠ|
+|p|lowercase pi ᴨ|
 |shift p|capital pi Π|
 |/|division symbol ÷|
 |shift /|inverted question mark ¿|
