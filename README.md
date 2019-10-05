@@ -1,5 +1,7 @@
 # For lawyers who type on Windows
 
+Version 1
+
 ## To use:
 1. Save [this file](https://raw.githubusercontent.com/saizai/autohotkeys_for_lawyers/master/autohotkeys_for_lawyers.ahk) somwehere with the extension .ahk
 2. Install https://autohotkey.com
