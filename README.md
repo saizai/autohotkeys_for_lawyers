@@ -7,9 +7,9 @@ Version 1
 2. Install https://autohotkey.com
 3. Right click the saved file and click "run this script"
 4. To start on boot:
- a. open explorer (windows + e)
- b. go to  `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`
- c. right click > new > shortcut, enter the location of the .ahk file
+   1. open explorer (windows + e)
+   2. go to  `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`
+   3. right click > new > shortcut, enter the location of the .ahk file
 
 ## Differences from OSX Extended Keyboard
 
