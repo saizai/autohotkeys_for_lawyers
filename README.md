@@ -24,11 +24,11 @@ Disables alt + right shift changing text direction.
 |If you type alt + (the key below)|you get|
 |--------------------------------|------|
 |(combining keystrokes)||
-|\`|grave next character (èÀÈòÒìÌùÙ)|
-|e|acute next character (éáÁÉóÓíÍúÚ)|
-|i|circumflex next character (îâêÂÊôÔÎûÛ)|
-|u|umlaut next character (üäëïöËÏÖÜ)|
-|n|tilde next character (ñãõÃÕÑ)|
+|\`|grave next character (è àìòù ÀÈÌÒÙ) (è is the default if you wait >2 seconds)|
+|e|acute next character (é áíóú ÁÉÍÓÚ)|
+|i|circumflex next character (î âêôû ÂÊÔÎÛ)|
+|u|umlaut next character (ü äëïö ÄËÏÖÜ)|
+|n|tilde next character (ñ ãõ ÃÕÑ)|
 |(single keystrokes)||
 |'|a-e ligature (æÆ)|
 |a|ring a (åÅ)|
