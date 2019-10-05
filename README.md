@@ -36,7 +36,7 @@ Disables alt + right shift changing text direction.
 |o|slashed o (øØ)|
 |q|o-e ligature (œŒ)|
 |\[|opening single quote ‘|
-|shift\[|opening double quote “|
+|shift \[|opening double quote “|
 |]|closing single quote ’|
 |shift ]|closing double quote ”|
 |1|inverted exclamation ¡|
@@ -65,8 +65,7 @@ Disables alt + right shift changing text direction.
 |g|copyright ©|
 |r|registered trademark ®|
 |shift r|per mille ‰|
-|p|lowercase pi ᴨ|
-|shift p|capital pi Π|
+|p|pi (ᴨΠ)|
 |/|division symbol ÷|
 |shift /|inverted question mark ¿|
 |:|left double guillemet (angle quote) «|
