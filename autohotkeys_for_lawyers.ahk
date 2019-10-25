@@ -1,4 +1,4 @@
-; Sai's autohotkeys for lawyers, version 1
+﻿; Sai's autohotkeys for lawyers, version 2
 ; 
 ; To use:
 ; 1. Save this file somwehere with the extension .ahk
@@ -13,7 +13,7 @@
 ;
 ; OSX style special keys
 ;
-; alt + x	outputs
+; right alt + x	outputs
 ;
 ; combining keystrokes
 ; `	grave next character
@@ -66,74 +66,107 @@
 ; shift :	right double guillemet (angle quote) »
 
 
+; (space)	non-breaking space ( )
+; shift (space)	full width low line (for citations TBD) ＿
+
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 #UseHook
 
+; SendMode InputThenPlay 	; required due to using keys not on English keyboard
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+; MsgBox, %A_SendMode%
 
 
 ; disable alt-rightshift causing change in text direction
 
-RShift::LShift
+; !RShift::!{LShift}	; breaks the hotkeys below, e.g. alt-shift-c doesn't do the same as shift-alt-c
+!>+::!<+	; works better
 
-; ! = alt, ^ = ctrl, + = shift
-!e::diacritic("eéaáAÁEÉoóOÓiíIÍuúUÚ")	; acute
-!i::diacritic("iîaâeêAÂEÊoôOÔIÎuûUÛ")	; circumflex
-!vkC0::diacritic("eèaàAÀEÈoòOÒiìIÌuùUÙ")	; ` grave (using virtual key code)
-!n::diacritic("nñaãoõnñAÃOÕNÑ")	; tilde
-!u::diacritic("uüaäeëiïoöAÄEËIÏOÖUÜ")	; umlaut
+; ! = alt, ^ = ctrl, + = shift, # = windows; < = left, > = right
+>!e::diacritic("eéaáAÁEÉoóOÓiíIÍuúUÚ")	; acute
+>!i::diacritic("iîaâeêAÂEÊoôOÔIÎuûUÛ")	; circumflex
+>!vkC0::diacritic("eèaàAi	ÀEÈoòOÒiìIÌuùUÙ")	; ` grave (using virtual key code)
+>!n::diacritic("nñaãoõAÃOÕNÑ")	; tilde
+>!u::diacritic("uüaäeëiïoöAÄEËIÏOÖUÜ")	; umlaut
 
 ; Alt + Shift + key
-*!c::altShift("ç","Ç")
-*!a::altShift("å","Å") ; ring
-*!o::altShift("ø","Ø")
-*!'::altShift("æ","Æ")
-*!q::altShift("œ","Œ")
-*!r::altShift("®","‰")
-*!p::altShift("ᴨ","Π")
-*!1::altShift("¡","⁄")
-*!2::altShift("™","€")
-*!3::altShift("£","‹")
-*!4::altShift("¢","›")
-*!5::altShift("∞","†")
-*!6::altShift("§"," ̂")
-*!7::altShift("¶","‡")
-*!8::altShift("•","°")
-*!9::altShift("ª","·")
-*!0::altShift("º","‚")
-*!-::altShift("–","—")
-*!=::altShift("≠","±")
-*!/::altShift("÷","¿")	
-*![::altShift("‘","“")
-*!]::altShift("’","”")
-*!\::altShift("«","»")
+>!c::Send ç
+>!+c::Send Ç
+>!a::Send å
+>!+a::Send Å
+>!o::Send ø
+>!+o::Send Ø
+>!'::Send æ
+>!+'::Send Æ
+>!q::Send œ
+>!+q::Send Œ
+>!r::Send ®
+>!+r::Send ‰
+>!p::Send ᴨ
+>!+p::Send Π
+>!1::Send ¡
+>!+1::Send ⁄
+>!2::Send ™
+>!+2::Send €
+>!3::Send £
+>!+3::Send ‹
+>!4::Send ¢
+>!+4::Send ›
+>!5::Send ∞
+>!+5::Send †
+>!6::Send §
+>!+6::Send  ̂	; combining circumflex
+>!7::Send ¶
+>!+7::Send ‡
+>!8::Send •
+>!+8::Send °
+>!9::Send ª
+>!+9::Send ·	; middle dot
+>!0::Send º
+>!+0::Send ‚	; low quote
+>!-::Send –	; en dash
+>!+-::Send —	; em dash
+>!=::Send ≠
+>!+=::Send ±
+>!/::Send ÷
+>!+/::Send ¿
+>![::Send ‘	; opening single quote
+>!+[::Send “	; opening double quote
+>!]::Send ’	; closing single quote
+>!+]::Send ”	; closing double quote
+>!\::Send «
+>!+\::Send »
 
+>!b::Send ∫	; integral
+>!d::Send ∂	; delta - TODO possibly change to eth
+>!f::Send ƒ	; function
+>!g::Send ©
+>!h::Send ˙	; upper dot
+	; >!j::Send {delta}
+>!k::Send °	; degree
+	; >!+k::Send {Apple}	; not sure this exists
+>!l::Send ¬	; logical not
+>!m::Send µ
+>!+m::Send ˜	; high (small) tilde
+>!s::Send ß
+>!t::Send †
+>!+v::Send ◊
+	; >!w::Send {epsilon}
+>!+w::Send „	; low double quote
+>!x::Send ≈
+>!y::Send ¥
+	; >!z::Send {Omega}
+>!`;::Send …	; ellipsis
+>!,::Send ≤
+>!+,::Send ¯	; macron
+>!.::Send ≥
 
-*!b::altShift(" ∫","")
-*!d::altShift("∂","")
-*!f::altShift("ƒ","")
-*!g::altShift("©","")
-*!h::altShift("˙","")   
-; *!j::altShift("{delta}","")
-; *!k::altShift("°","{Apple}")
-*!l::altShift("¬","")
-*!m::altShift("µ","˜")
-*!s::altShift("ß","")
-;*!t::altShift("†","")
-*!v::altShift("v","◊")
-; *!w::altShift("{epsilon}","„")
-*!x::altShift("≈","")
-*!y::altShift("¥","")
-; *!z::altShift("{Omega}","")
-*!`;::altShift("…","")
-*!,::altShift("≤","¯")
-*!.::altShift("≥","")
-
-;  ; 0160 nbsp
-
+>!Space::Send  	; non breaking space
+>!+Space::Send ＿	; full width low line (for citations TBD)
 
 diacritic(map) {
     Input c, L1 T2 ;, {LCtrl}{RCtrl}{LAlt}{RAlt}{LWin}{RWin}
@@ -152,4 +185,3 @@ altShift(accented,accentedShift) {
 		SendInput % accentedShift
 	}
 }
-
