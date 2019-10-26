@@ -1,8 +1,12 @@
 # For lawyers who type on Windows
 
-Version 2
+Version 2.1
 
 ## Changes
+
+v2.1
+* Fixed text-direction change blocking. It's (ctrl-shift, not alt-shift).
+* Added midline ellipsis ⋯ (right alt + shift + ;)
 
 v2
 * Made all modifiers use RIGHT alt only, to not interfere with hotkeys in programs that use alt-something. You can now use those with left alt, and use right alt for key modifiers.
@@ -38,7 +42,7 @@ v2
 
 ## What you get:
 
-Disables alt + right shift changing text direction.
+Disables ctrl + right shift changing text direction.
 
 |If you type right alt + (the key below)|you get|
 |--------------------------------|------|

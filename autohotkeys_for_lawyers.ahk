@@ -1,5 +1,5 @@
 ﻿; Sai's autohotkeys for lawyers, version 2
-; 
+;
 ; To use:
 ; 1. Save this file somwehere with the extension .ahk
 ; 2. Install https://autohotkey.com
@@ -21,14 +21,14 @@
 ; i	circumflex next character
 ; u	umlaut next character
 ; n	tilde next character (including n, eg ñÑ)
-; 
+;
 ; single keystroke
 ; '	a-e ligature (æÆ)
 ; a	ring a (åÅ)
 ; c	cedilla (çÇ)
 ; o	slashed o (øØ)
 ; q	o-e ligature (œŒ)
-; 
+;
 ; [	opening single quote ‘
 ; shift [	opening double quote “
 ; ]	closing single quote ’
@@ -81,10 +81,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; MsgBox, %A_SendMode%
 
 
-; disable alt-rightshift causing change in text direction
+; disable ctrl-rightshift causing change in text direction
+^RShift::Send ^{LShift}	; breaks the hotkeys below, e.g. alt-shift-c doesn't do the same as shift-alt-c
 
-; !RShift::!{LShift}	; breaks the hotkeys below, e.g. alt-shift-c doesn't do the same as shift-alt-c
-!>+::!<+	; works better
 
 ; ! = alt, ^ = ctrl, + = shift, # = windows; < = left, > = right
 >!e::diacritic("eéaáAÁEÉoóOÓiíIÍuúUÚ")	; acute
@@ -161,6 +160,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 >!y::Send ¥
 	; >!z::Send {Omega}
 >!`;::Send …	; ellipsis
+>!+`;::Send ⋯	; midline ellipsis
 >!,::Send ≤
 >!+,::Send ¯	; macron
 >!.::Send ≥
